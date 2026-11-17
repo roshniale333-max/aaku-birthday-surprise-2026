@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday To My Wifeyy ❤️</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Georgia,serif;
+  background:linear-gradient(135deg,#180d2e,#32134f,#160b29);
+  color:white;text-align:center;
+  min-height:100vh;
+}
+#lock{
+  min-height:100vh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;padding:25px;
+}
+h1{color:#f5c5ff;font-size:2.1rem;margin-bottom:20px}
+p{line-height:1.8}
+input{
+  padding:14px;border-radius:25px;border:none;
+  width:230px;text-align:center;margin:20px;
+}
+button{
+  background:#c77dff;color:white;border:0;
+  padding:13px 25px;border-radius:25px;
+  cursor:pointer;font-size:15px;
+}
+button:hover{background:#a34ce0}
+#main{display:none;padding:30px 18px}
+section{padding:55px 10px;max-width:650px;margin:auto}
+h2{color:#edbaff;margin-bottom:22px}
+.card{
+  background:#ffffff12;border:1px solid #ffffff25;
+  border-radius:20px;padding:25px;margin:18px auto;
+}
+.gallery,.videos{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;
+}
+.gallery img,.videos video{
+  width:100%;border-radius:15px;
+}
+.heart{
+  position:fixed;bottom:-30px;
+  animation:float 7s linear infinite;
+  pointer-events:none;z-index:0;
+}
+@keyframes float{
+  to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+footer{padding:35px;color:#e6b5ff}
+</style>
+</head>
+
+<body>
+
+<div id="lock">
+  <h1>My Love ❤️</h1>
+  <p>Enter Password to Unlock Your Surprise ❤️</p>
+  <input type="password" id="password" placeholder="Enter Password">
+  <button onclick="unlock()">Unlock My Surprise 💜</button>
+  <p id="error" style="color:pink;margin-top:15px"></p>
+</div>
+
+<div id="main">
+
+<section>
+  <h1>Happy Birthday To My Wifeyy ❤️</h1>
+  <p>To my favourite person, my happiness and my forever.</p>
+  <p style="margin-top:20px">Today is all about YOU, my love. 🥹</p>
+</section>
+
+<section>
+  <h2>💌 Love Letter</h2>
+  <div class="card">
+    My dearest Aaku,<br><br>
+    You are my favourite part of every day.
+    Every moment with you is a beautiful memory.
+    I wish I could give you all the happiness
+    in this world. Thank you for being mine.
+    I will keep choosing you, every single day.<br><br>
+    Forever yours, my love. ❤️
+  </div>
+</section>
+
+<section>
+  <h2>📸 Our Photo Gallery</h2>
+  <div class="card gallery">
+    <img src="photos/photo1.jpg" alt="Our memory 1">
+    <img src="photos/photo2.jpg" alt="Our memory 2">
+    <img src="photos/photo3.jpg" alt="Our memory 3">
+    <img src="photos/photo4.jpg" alt="Our memory 4">
+  </div>
+</section>
+
+<section>
+  <h2>🎥 Video Memories</h2>
+  <div class="card videos">
+    <video controls playsinline src="videos/video1.mp4"></video>
+    <video controls playsinline src="videos/video2.mp4"></video>
+  </div>
+</section>
+
+<section>
+  <h2>🎵 Our Special Song</h2>
+  <div class="card">
+    <p>A Thousand Years ❤️</p>
+    <audio controls loop style="width:100%;margin-top:20px">
+      <source src="music/our-song.mp3" type="audio/mpeg">
+    </audio>
+    <p style="margin-top:12px">A melody for our forever. 💜</p>
+  </div>
+</section>
+
+<section>
+  <h2>🎁 A Little Surprise</h2>
+  <div class="card">
+    <h1>❤️ You Are My Forever ❤️</h1>
+    <p>No matter where life takes us,
+    I want every tomorrow to have you in it.</p>
+    <p style="margin-top:20px">I LOVE YOU, AKUU! 🥹</p>
+  </div>
+</section>
+
+<footer>
+  Made with endless love ❤️<br>
+  Forever Us ♾️
+</footer>
+</div>
+
+<script>
+function unlock(){
+  if(document.getElementById("password").value==="13022026"){
+    document.getElementById("lock").style.display="none";
+    document.getElementById("main").style.display="block";
+    window.scrollTo(0,0);
+  }else{
+    document.getElementById("error").innerText="Wrong password, my love! ❤️";
+  }
+}
+
+setInterval(()=>{
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML=["❤️","💜","💕","✨"][Math.floor(Math.random()*4)];
+  heart.style.left=Math.random()*100+"%";
+  heart.style.fontSize=(15+Math.random()*20)+"px";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),7000);
+},600);
+</script>
+
+</body>
+</html>
